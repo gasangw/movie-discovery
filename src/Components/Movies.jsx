@@ -7,6 +7,7 @@ function Movies() {
   const [search, setSearch] = useState("");
   const [errorMessage, setErrorMessage] = useState("")
   const [isloading, setIsLoading] = useState(false)
+  const [fetchedResults, setFetchedResults] = useState([])
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -24,13 +25,17 @@ function Movies() {
     fetchMovies();
   }, []);
 
+
   const handleSearch = (e) => {
-    setSearch(e.target.value);
     setIsLoading(true)
+    setSearch(e.target.value);
   };
 
-  const filteredMovies = movies.filter((values) =>
-  values.title.toLowerCase().includes(search.toLowerCase()));
+  useEffect(() => {
+    const filteredMovies = movies.filter((values) => values.title.toLowerCase().includes(search.toLowerCase()))
+    setFetchedResults([...filteredMovies])
+    setIsLoading(false)
+  },[movies, search])
 
 return (
     <div>
@@ -42,7 +47,7 @@ return (
       />
       {errorMessage && <div className="error">{errorMessage}</div>}
       <div className="container grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
-          {isloading ? <Loading/> : (filteredMovies.map((movie) => (
+          {isloading ? <Loading/> : (fetchedResults.map((movie) => (
             <div key={movie.id} className="flex flex-row">
               <ListOfMovies data={movie} />
             </div>
