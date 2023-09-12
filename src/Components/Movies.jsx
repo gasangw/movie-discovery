@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import ListOfMovies from "./ListOfMovies";
+import Loading from "./Loading";
 
 function Movies() {
   const [movies, setMovies] = useState([]);
   const [search, setSearch] = useState("");
   const [errorMessage, setErrorMessage] = useState("")
+  const [isloading, setIsLoading] = useState(false)
+
   useEffect(() => {
     const fetchMovies = async () => {
       try{
@@ -13,6 +16,7 @@ function Movies() {
         );
         const data = await response.json();
         setMovies([...data.results]);
+
       } catch(error){
          setErrorMessage(`"Unable to fetch movie list due to: ${error}`)
       }
@@ -22,25 +26,13 @@ function Movies() {
 
   const handleSearch = (e) => {
     setSearch(e.target.value);
+    setIsLoading(true)
   };
 
-  const renderMovies = (
-    <div className="container grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
-      {movies &&
-      movies
-        .filter((values) =>
-          values.title.toLowerCase().includes(search.toLowerCase())
-        )
-        .map((movie) => {
-          return (
-            <div key={movie.id} className="flex flex-row">
-              <ListOfMovies data={movie} />
-            </div>
-          );
-        })}
-    </div>
-  )
-  return (
+  const filteredMovies = movies.filter((values) =>
+  values.title.toLowerCase().includes(search.toLowerCase()));
+
+return (
     <div>
       <input
         type="text"
@@ -49,6 +41,13 @@ function Movies() {
         onChange={handleSearch}
       />
       {errorMessage && <div className="error">{errorMessage}</div>}
+      <div className="container grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
+          {isloading ? <Loading/> : (filteredMovies.map((movie) => (
+            <div key={movie.id} className="flex flex-row">
+              <ListOfMovies data={movie} />
+            </div>
+        )))}
+      </div>
     </div>
   );
 }
