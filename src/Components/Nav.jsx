@@ -1,5 +1,5 @@
 import React from 'react'
-import tv from '../Images/tv.png'
+import tv from '../Images/tv.png';
 
 function Nav() {
   return (
@@ -8,7 +8,7 @@ function Nav() {
            <img src={tv} alt="movie-box" />
            <div className='flex justify-between border-2 border-[#D1D5DB] text-[#D1D5DB] rounded-md'>
             <input type='text' placeholder='What do you want to watch?' />
-            <img src="" alt="bg" />
+            <img src="../Images/Icon.svg" alt="search-icon" />
            </div>
         </div>
     </div>
