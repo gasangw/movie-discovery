@@ -1,12 +1,16 @@
 import React from 'react'
 
 function ListOfMovies(props) {
-    const [poster_path,vote_average, release_date,title] = props.data
+    const { backdrop_path,
+        release_date,title} = props.data
+       // {backgroundImage: `url('https://image.tmdb.org/t/p/original/${movie.backdrop_path}')`}
   return (
     <div className='container'>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-           <div className='grid text-left rounded-lg'>
-              <img src="" alt="" />
+        <div>
+           <div className='grid text-left card' data-testid="movie-card">
+              <img src={`'https://image.tmdb.org/t/p/original${backdrop_path}`} alt={title} data-testid="movie-poster"/>
+              <h2 data-testid="movie-title">{title}</h2>
+              <p data-testid="movie-release-date">{release_date}</p>
            </div>
         </div>
     </div>
