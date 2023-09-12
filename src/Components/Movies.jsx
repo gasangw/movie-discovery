@@ -21,7 +21,7 @@ function Movies() {
       <input type="text" placeholder='What movie do you want to watch?' className='flex mx-auto' onChange={handleSearch}/>
     <div className='container grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4'>
        {
-        movies && movies.filter(values => values.title.includes(search)).map((movie)=> {
+        movies && movies.filter(values => values.title.toLowerCase().includes(search.toLowerCase())).map((movie)=> {
            return (
                 <div key={movie.id} className='flex flex-row'>
                    <ListOfMovies  data={movie}/>
