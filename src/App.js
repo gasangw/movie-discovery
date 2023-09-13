@@ -1,4 +1,4 @@
-import Nav from "./Components/Nav";
+import HomePage from "./Components/HomePage";
 import Movies from "./Components/Movies";
 import MovieDetails from "./Components/MovieDetails";
 import { Routes, Route } from "react-router-dom";
@@ -18,14 +18,14 @@ function App() {
         setMovies([...data.results]);
 
       } catch(error){
-         setErrorMessage(`"Unable to fetch movie list due to: ${error}`)
+         setErrorMessage(`Unable to fetch movie list due to: ${error}`)
       }
     };
     fetchMovies();
   }, []);
   return (
     <div className="App">
-      <Nav />
+      <HomePage />
       <Routes>
          <Route path="/" element={ <Movies movies={movies} errorMessage={errorMessage}/>}/>
          <Route path="/movies/:id" element={<MovieDetails movies={movies}/>}/>

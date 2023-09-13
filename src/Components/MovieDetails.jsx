@@ -8,7 +8,7 @@ function MovieDetails({movies}) {
   const {title, overview, popularity, release_date} = moveClickedOn
   const date = new Date(release_date).toUTCString()
   return (
-    <div className='container'>
+    <div className='container py-10'>
         <div className='py-1 px-3 rounded-md bg-green-600 w-fit flex justify-center items-center'>
           <Link to='/' className='text-white text-center'>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
