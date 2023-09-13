@@ -8,7 +8,7 @@ function HomePage(props) {
        <Nav handleSearch={props.handleSearch} />
        <div className='container text-white text-left'>
          <h1 className='text-4xl font-semibold mt-14 py-3'>John Wick 3 :<br/> Parabellum</h1>
-         <p className='text-lg w-1/3'>John Wick is on the run after killing a member 
+         <p className='text-lg w-full lg:w-1/3'>John Wick is on the run after killing a member 
          of the international assassins' guild, and with a $14 million price tag on his head,
          he is the target of hit men and women everywhere.</p>
 

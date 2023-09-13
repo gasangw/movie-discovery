@@ -21,12 +21,12 @@ function Footer() {
           <img src={youtube} alt="youtube" />
         </li>
       </ul>
-      <ul className="flex space-x-3 font-bold">
+      <ul className="flex flex-col md:flex-row space-y-3 md:space-y-0 space-x-3 font-bold">
         <li className="hover:underline">Conditions of Use</li>
         <li className="hover:underline">Privacy & Policy</li>
         <li className="hover:underline">Press Room</li>
       </ul>
-      <p className="text-base text-[#6B7280]">
+      <p className="text-base text-[#6B7280] text-center">
         © 2021 MovieBox by Adriana Eka Prayudha
       </p>
     </div>
