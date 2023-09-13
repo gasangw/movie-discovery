@@ -1,6 +1,6 @@
 import React from 'react'
 import Nav from './Nav'
-import imageURL from '../Images/Poster.svg'
+import imageURL from '../Images/Poster.png'
 
 function HomePage(props) {
   return (

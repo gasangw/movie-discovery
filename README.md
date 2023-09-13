@@ -1,9 +1,8 @@
 # Project Name
-
-- 
+- Movie Discovery
 
 # Description 
-- This App enables users to search for any country in any continent and see details of each country
+- This App enables users to search for their favorite movies and also see details of each movie.
 
 ## Built With
 
@@ -12,14 +11,13 @@
 - TailwindCSS
 - Reactjs
 
-
 ## Live Demo
 
-[Live Demo Link](https://country-application.netlify.app/)
+[Live Demo Link](https://my-movie-discovery-app.netlify.app/)
 
 
 ## Getting Started
-- Run ``
+- Run `git@github.com:gasangw/movie-discovery.git`
 
 
 👤 **Gasangwa Thomas**
