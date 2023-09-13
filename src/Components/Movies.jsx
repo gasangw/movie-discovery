@@ -2,29 +2,11 @@ import React, { useState, useEffect } from "react";
 import ListOfMovies from "./ListOfMovies";
 import Loading from "./Loading";
 
-function Movies() {
-  const [movies, setMovies] = useState([]);
+function Movies({movies, errorMessage}) {
+  
   const [search, setSearch] = useState("");
-  const [errorMessage, setErrorMessage] = useState("")
   const [isloading, setIsLoading] = useState(false)
   const [fetchedResults, setFetchedResults] = useState([])
-
-  useEffect(() => {
-    const fetchMovies = async () => {
-      try{
-        const response = await fetch(
-          "https://api.themoviedb.org/3/movie/top_rated?api_key=f12569fc3f929239fab0c4a8fa065dda"
-        );
-        const data = await response.json();
-        setMovies([...data.results]);
-
-      } catch(error){
-         setErrorMessage(`"Unable to fetch movie list due to: ${error}`)
-      }
-    };
-    fetchMovies();
-  }, []);
-
 
   const handleSearch = (e) => {
     setIsLoading(true)
@@ -36,7 +18,7 @@ function Movies() {
     setFetchedResults([...filteredMovies])
     setIsLoading(false)
   },[movies, search])
-
+console.log(fetchedResults)
 return (
     <div>
       <input
