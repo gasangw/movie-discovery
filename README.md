@@ -1,8 +1,10 @@
-# Project Name
+## Project Name
+
 - Movie Discovery
 
-# Description 
-- This App enables users to search for their favorite movies and also see details of each movie.
+## Description 
+
+> This App enables users to search for their favorite movies and also see details of each movie.
 
 ## Built With
 
@@ -13,6 +15,7 @@
 ## Live Demo
 
 [Live Demo Link](https://my-movie-discovery-app.netlify.app/)
+
 
 ## Getting Started
 - Install Nodejs
@@ -25,13 +28,14 @@
 - Run `npm run start`
 
 
+
 👤 **Gasangwa Thomas**
 
 - GitHub: [@githubhandle](https://github.com/gasangw)
 - Twitter: [@twitterhandle](https://twitter.com/ThomasGasangwa)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/gasangwa-thomas-84197222a/)
 
-gi## 🤝 Contributing
+## Give  🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
