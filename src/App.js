@@ -1,11 +1,16 @@
 import Nav from "./Components/Nav";
 import Movies from "./Components/Movies";
+import MovieDetails from "./Components/MovieDetails";
+import { Routes, Route } from "react-router-dom";
+
 function App() {
   return (
     <div className="App">
       <Nav />
-      <Movies />
-        <h1 className="text-2xl text-green-700 text-center">Hello</h1>
+      <Routes>
+         <Route path="/" element={ <Movies />}/>
+         <Route path="/movie/:id" element={<MovieDetails />}/>
+      </Routes>
     </div>
   );
 }
