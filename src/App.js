@@ -18,7 +18,7 @@ function App() {
         setMovies([...data.results]);
 
       } catch(error){
-         setErrorMessage(`Unable to fetch movie list due to: ${error}`)
+         setErrorMessage(`${error}: is the error causing your app to fail. Kindly fix it`)
       }
     };
     fetchMovies();

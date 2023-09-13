@@ -21,6 +21,15 @@ function Movies({movies, errorMessage}) {
 console.log(fetchedResults)
 return (
     <div>
+      <div className="container flex justify-between">
+        <h3 className="font-bold text-3xl">Featured Movie</h3>
+        <div className="flex gap-3 justify-center items-center cursor-pointer">
+           <p className="text-red-600">See more</p>
+           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-red-600">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+          </svg>
+        </div>
+      </div>
       <input
         type="text"
         placeholder="What movie do you want to watch?"

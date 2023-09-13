@@ -11,10 +11,14 @@
   }
 
   .error {
-    margin-top: 2rem;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, 50%);
     color: white;
     background-color: red;
-    padding: 10px 8px;
+    padding: 18px 8px;
     font-weight: 700;
     text-align: center;
   }
