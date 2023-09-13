@@ -6,18 +6,23 @@
 
 ## Built With
 
-- HTML5
+- Reactjs
 - CSS3
 - TailwindCSS
-- Reactjs
 
 ## Live Demo
 
 [Live Demo Link](https://my-movie-discovery-app.netlify.app/)
 
-
 ## Getting Started
+- Install Nodejs
+- Install VSCode and `Git Bash`
+- Open `Git Bash` and run the next command
 - Run `git@github.com:gasangw/movie-discovery.git`
+- cd `movie-discovery`
+- Run `code .` to open the project in the VS Code and run the commands below.
+- Run `npm install`
+- Run `npm run start`
 
 
 👤 **Gasangwa Thomas**
@@ -30,7 +35,7 @@ gi## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/gasangw/All-Countries-App/issues).
+Feel free to check the [issues page](https://github.com/gasangw/movie-discovery/issues).
 
 ## Show your support
 
