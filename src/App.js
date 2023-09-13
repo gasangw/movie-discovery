@@ -1,6 +1,7 @@
 import HomePage from "./Components/HomePage";
 import Movies from "./Components/Movies";
 import MovieDetails from "./Components/MovieDetails";
+import Footer from "./Components/Footer";
 import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 
@@ -30,6 +31,7 @@ function App() {
          <Route path="/" element={ <Movies movies={movies} errorMessage={errorMessage}/>}/>
          <Route path="/movies/:id" element={<MovieDetails movies={movies}/>}/>
       </Routes>
+      <Footer />
     </div>
   );
 }
