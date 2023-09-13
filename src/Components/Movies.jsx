@@ -18,7 +18,7 @@ function Movies({movies, errorMessage}) {
     setFetchedResults([...filteredMovies])
     setIsLoading(false)
   },[movies, search])
-console.log(fetchedResults)
+
 return (
     <div>
       <div className="container flex justify-between">
