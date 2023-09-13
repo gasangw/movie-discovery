@@ -2,10 +2,10 @@ import React from 'react'
 import Nav from './Nav'
 import imageURL from '../Images/Poster.svg'
 
-function HomePage() {
+function HomePage(props) {
   return (
     <div style={{backgroundImage: `url(${imageURL})`}} className='mb-8 bg-cover bg-no-repeat pb-4'>
-       <Nav />
+       <Nav handleSearch={props.handleSearch} />
        <div className='container text-white text-left'>
          <h1 className='text-4xl font-semibold mt-14 py-3'>John Wick 3 :<br/> Parabellum</h1>
          <p className='text-lg w-1/3'>John Wick is on the run after killing a member 

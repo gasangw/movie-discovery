@@ -1,4 +1,3 @@
-import HomePage from "./Components/HomePage";
 import Movies from "./Components/Movies";
 import MovieDetails from "./Components/MovieDetails";
 import Footer from "./Components/Footer";
@@ -26,7 +25,6 @@ function App() {
   }, []);
   return (
     <div className="App">
-      <HomePage />
       <Routes>
          <Route path="/" element={ <Movies movies={movies} errorMessage={errorMessage}/>}/>
          <Route path="/movies/:id" element={<MovieDetails movies={movies}/>}/>

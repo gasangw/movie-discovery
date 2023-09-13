@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ListOfMovies from "./ListOfMovies";
+import HomePage from './HomePage'
 import Loading from "./Loading";
 
 function Movies({movies, errorMessage}) {
@@ -8,9 +9,9 @@ function Movies({movies, errorMessage}) {
   const [isloading, setIsLoading] = useState(false)
   const [fetchedResults, setFetchedResults] = useState([])
 
-  const handleSearch = (e) => {
+  const handleSearch = (myMovie) => {
     setIsLoading(true)
-    setSearch(e.target.value);
+    setSearch(myMovie);
   };
 
   useEffect(() => {
@@ -21,6 +22,7 @@ function Movies({movies, errorMessage}) {
 
 return (
     <div>
+      <HomePage handleSearch={handleSearch} />
       <div className="container flex justify-between">
         <h3 className="font-bold text-3xl">Featured Movie</h3>
         <div className="flex gap-3 justify-center items-center cursor-pointer">
@@ -30,12 +32,6 @@ return (
           </svg>
         </div>
       </div>
-      <input
-        type="text"
-        placeholder="What movie do you want to watch?"
-        className="flex mx-auto"
-        onChange={handleSearch}
-      />
       {errorMessage && <div className="error">{errorMessage}</div>}
       <div className="container grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
           {isloading ? <Loading/> : (fetchedResults.map((movie) => (
