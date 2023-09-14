@@ -26,10 +26,10 @@ function MovieDetails({movies}) {
             />
            </div>
            <div>
-           <h1 className='text-lg font-medium' data-testid="movie-title"><span className='font-bold'>Title:  </span>{title}</h1>
-            <h3 className='text-base' data-testid="movie-overview"><span className='font-bold'>Overview:  </span>{overview}</h3>
-            <p className='text-base' data-testid="movie-runtime"><span className='font-bold'>Runtime:  </span>{popularity}</p>
-            <p className='italic font-normal' data-testid="movie-release-date"><span className='font-bold'>Release Date:  </span>{date}</p>
+           <h1 className='text-lg font-medium' data-testid="movie-title">{title}</h1>
+            <h3 className='text-base' data-testid="movie-overview">{overview}</h3>
+            <p className='text-base' data-testid="movie-runtime">{popularity}</p>
+            <p className='italic font-normal' data-testid="movie-release-date">{date}</p>
         </div>
            </div>
     </div>
